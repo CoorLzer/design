@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>购物网站</title>
+		<link rel="stylesheet" type="text/css" href="css/first.css">
+		<!--<script type="text/javascript" src="js/first.js"></script>-->
+	</head>
+	<body>
+		<div id="title">
+			<div id="logobox">
+				<a  href="index.html">
+					<img src="img/logo.jpg" class="logo">
+					<div class="logo-word">
+						<p>购物网站</p>
+						<p>点击回首页</p>
+					</div>
+				</a>
+			</div>
+			<div class="search bar">
+				<form>
+					<input type="text" placeholder="请输入您要搜索的内容...">
+					<button type="submit">
+						<!--<img id="searchbutton" src="img/search.jpg" />-->
+						🔍
+					</button>
+				</form>
+			</div>
+			<div class="cart">
+				<a href="cart.html" style="color: white;"><img src="img/购物车.png" />购物车</a>
+			</div>
+		</div>
+		<div id="main">
+			
+			<div id="maintable-main" style="width: 80%;float: left;margin-left: 12.5%;">
+				<div id="windowbox">
+					
+					
+					<ul id="middlelist" style="position: relative;">
+						<li>
+							<a class="listword1" href="menu.html">男装</a>
+							<div id="middlecontent">
+		                        <div id="contentlist" class="clearfix">
+		                            <div style="width: 50%;float: left;">
+		                                <h2>男装</h2>
+										<a class="listword3" href="menu.html">男装</a>
+										<a class="listword3" href="menu.html">男装</a>
+										<a class="listword3" href="menu.html">男装</a>
+										<a class="listword3" href="menu.html">男装</a>
+										<a class="listword3" href="menu.html">男装</a>
+										<a class="listword3" href="menu.html">男装</a>
+										<a class="listword3" href="menu.html">男装</a>
+										<a class="listword3" href="menu.html">男装</a>
+										<a class="listword3" href="menu.html">男装</a>
+										<a class="listword3" href="menu.html">男装</a>
+										<a class="listword3" href="menu.html">男装</a>
+										<a class="listword3" href="menu.html">男装</a>
+										<a class="listword3" href="menu.html">男装</a>
+										<a class="listword3" href="menu.html">男装</a>
+									</div>
+									<div style="width: 50%;float: left;">
+		                                <h2>男装</h2>
+										<a class="listword3" href="menu.html">男装</a>
+										<a class="listword3" href="menu.html">男装</a>
+										<a class="listword3" href="menu.html">男装</a>
+									</div>
+						</li>
+						<li>
+							<a class="listword1" href="menu.html">女装</a>
+							<div id="middlecontent">
+		                        <div id="contentlist" class="clearfix">
+		                            <div style="width: 50%;float: left;">
+		                                <h2>女装</h2>
+										<a class="listword3" href="menu.html">女装</a>
+										<a class="listword3" href="menu.html">女装</a>
+										<a class="listword3" href="menu.html">女装</a>
+									</div>
+									<div style="width: 50%;float: left;">
+		                                <h2>女装</h2>
+										<a class="listword3" href="menu.html">女装</a>
+										<a class="listword3" href="menu.html">女装</a>
+										<a class="listword3" href="menu.html">女装</a>
+									</div>
+						</li>
+						<li>
+							<a class="listword1" href="menu.html">箱包</a>
+							<div id="middlecontent">
+		                        <div id="contentlist" class="clearfix">
+		                            <div style="width: 50%;float: left;">
+		                                <h2>箱包</h2>
+										<a class="listword3" href="menu.html">箱包</a>
+										<a class="listword3" href="menu.html">箱包</a>
+										<a class="listword3" href="menu.html">箱包</a>
+									</div>
+									<div style="width: 50%;float: left;">
+		                                <h2>箱包</h2>
+										<a class="listword3" href="menu.html">箱包</a>
+										<a class="listword3" href="menu.html">箱包</a>
+										<a class="listword3" href="menu.html">箱包</a>
+									</div>
+						</li>
+						<li>
+							<a class="listword1" href="menu.html">母婴</a>
+							<div id="middlecontent">
+		                        <div id="contentlist" class="clearfix">
+		                            <div style="width: 50%;float: left;">
+		                                <h2>母婴</h2>
+										<a class="listword3" href="menu.html">母婴</a>
+										<a class="listword3" href="menu.html">母婴</a>
+										<a class="listword3" href="menu.html">母婴</a>
+									</div>
+									<div style="width: 50%;float: left;">
+		                                <h2>母婴</h2>
+										<a class="listword3" href="menu.html">母婴</a>
+										<a class="listword3" href="menu.html">母婴</a>
+										<a class="listword3" href="menu.html">母婴</a>
+									</div>
+						</li>
+					</ul>
+
+					<div class="box">
+						<div id="content">
+							<img src="img/box1.jpg" alt="" />
+							<img src="img/box2.jpg" alt="" />
+							
+							<img src="img/box1.jpg" alt="" />
+						</div>			
+					</div>
+					<script>
+						var content = document.getElementById("content");
+						var timer;
+						var outTimer;//延时定时器
+						var x = 0;
+						function move(){
+						x -= 1;
+						if(x % 1100 == 0){
+							//清定时器
+							clearInterval(timer);
+							//等个1s重新打开
+							clearTimeout(outTimer);
+							outTimer = setTimeout(function(){
+								timer = setInterval(move,16);
+							},700);
+						}
+						x = x <= -2200 ? 0 : x;
+						content.style.left = x + 'px';
+						}
+					timer = setInterval(move,16);
+					</script>
+					
+				</div>
+				<div class="title">猜你喜欢</div>
+				<ul class="item-list">
+					<li class="item-box">
+						<a class="item-box-a" href="#">
+							<img src="img/item.jpg" class="item-box-a-img"/>
+							<div class="item-title">商品A</div>
+							<div class="item-price">$25</div>
+							<div class="item-shop">店铺&nbsp;&nbsp;ShopNameIs&nbsp;A</div>
+							<hr color="#CCCCCC" />
+							<div class="item-footer">月销20</div>
+						</a>
+					</li>
+					<li class="item-box">
+						<a class="item-box-a" href="#">
+							<img src="img/item2.jpg" class="item-box-a-img"/>
+							<div class="item-title">商品B</div>
+							<div class="item-price">$25</div>
+							<div class="item-shop">店铺&nbsp;&nbsp;ShopNameIs&nbsp;B</div>
+							<hr color="#CCCCCC" />
+							<div class="item-footer">月销20</div>
+						</a>
+					</li>
+					<li class="item-box">
+						<a class="item-box-a" href="#">
+							<img src="img/item3.png" class="item-box-a-img"/>
+							<div class="item-title">商品C</div>
+							<div class="item-price">$25</div>
+							<div class="item-shop">店铺&nbsp;&nbsp;ShopNameIs&nbsp;C</div>
+							<hr color="#CCCCCC" />
+							<div class="item-footer">月销20</div>
+						</a>
+					</li>
+					<li class="item-box">
+						<a class="item-box-a" href="#">
+							<img src="img/item4.jpg" class="item-box-a-img"/>
+							<div class="item-title">商品D</div>
+							<div class="item-price">$25</div>
+							<div class="item-shop">店铺&nbsp;&nbsp;ShopNameIs&nbsp;D</div>
+							<hr color="#CCCCCC" />
+							<div class="item-footer">月销20</div>
+						</a>
+					</li>
+					<li class="item-box">
+						<a class="item-box-a" href="#">
+							<img src="img/item5.jpg" class="item-box-a-img"/>
+							<div class="item-title">商品E</div>
+							<div class="item-price">$25</div>
+							<div class="item-shop">店铺&nbsp;&nbsp;ShopNameIs&nbsp;E</div>
+							<hr color="#CCCCCC" />
+							<div class="item-footer">月销20</div>
+						</a>
+					</li>
+					<li class="item-box">
+						<a class="item-box-a" href="#">
+							<img src="img/item6.png" class="item-box-a-img"/>
+							<div class="item-title">商品F</div>
+							<div class="item-price">$25</div>
+							<div class="item-shop">店铺&nbsp;&nbsp;ShopNameIs&nbsp;F</div>
+							<hr color="#CCCCCC" />
+							<div class="item-footer">月销20</div>
+						</a>
+					</li>
+					<li class="item-box">
+						<a class="item-box-a" href="#">
+							<img src="img/item7.jpg" class="item-box-a-img"/>
+							<div class="item-title">商品G</div>
+							<div class="item-price">$25</div>
+							<div class="item-shop">店铺&nbsp;&nbsp;ShopNameIs&nbsp;G</div>
+							<hr color="#CCCCCC" />
+							<div class="item-footer">月销20</div>
+						</a>
+					</li>
+					<li class="item-box">
+						<a class="item-box-a" href="#">
+							<img src="img/item8.jpg" class="item-box-a-img"/>
+							<div class="item-title">商品H</div>
+							<div class="item-price">$25</div>
+							<div class="item-shop">店铺&nbsp;&nbsp;ShopNameIs&nbsp;H</div>
+							<hr color="#CCCCCC" />
+							<div class="item-footer">月销20</div>
+						</a>
+					</li>
+					<li class="item-box">
+						<a class="item-box-a" href="#">
+							<img src="img/item9.jpg" class="item-box-a-img"/>
+							<div class="item-title">商品I</div>
+							<div class="item-price">$25</div>
+							<div class="item-shop">店铺&nbsp;&nbsp;ShopNameIs&nbsp;I</div>
+							<hr color="#CCCCCC" />
+							<div class="item-footer">月销20</div>
+						</a>
+					</li>
+					<li class="item-box">
+						<a class="item-box-a" href="#">
+							<img src="img/item10.jpg" class="item-box-a-img"/>
+							<div class="item-title">商品J</div>
+							<div class="item-price">$25</div>
+							<div class="item-shop">店铺&nbsp;&nbsp;ShopNameIs&nbsp;J</div>
+							<hr color="#CCCCCC" />
+							<div class="item-footer">月销20</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>	
+	</body>
+	<foot>		
+		<div id="footer">
+			<hr id="hr2"/>
+    		<p>本网页为Web课设所用，没有版权<br />联系方式：123456789@123.com</p>
+ 		</div>
+	</foot>	
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>菜单</title>
+		<link rel="stylesheet" type="text/css" href="css/third.css">
+		<script type="text/javascript">
+			if (window.addEventListener){
+				window.addEventListener("load",init);
+			} else if(window.attachEvent()){   //IE浏览器不支持addEventListener
+				window.attachEvent("onload",init);  //IE浏览器在写时间的时候必须加上on
+			}
+		
+			function init(){
+				var left = document.getElementById("left");
+				left.onclick = function (){
+					leftNum();   
+				}
+				
+				var right = document.getElementById("right");
+				right.onclick = function (){
+					rightNum();
+				}
+				
+				function leftNum(){
+					var center = document.getElementById("center").innerHTML;
+					if (center > 1){   //如果中间显示的数大于1
+						center--;       //自减
+						currentNum(center);  //中间显示自减后的数值
+					} else{
+						alert("商品数不能为负");
+					}
+				}
+				
+				function rightNum(){
+					var center = document.getElementById("center").innerHTML;
+					if (center!=null){   //如果中间显示的数值小于最大的数
+						center++  //自加
+						currentNum(center);   //在中间显示自加后的数值
+					}
+				}
+				
+				function currentNum(num){
+					center.innerHTML = num;   //在中间显示相应的数值
+				}
+			}
+			
+			
+			function count(){
+				var nums = 0;
+				var chk = document.getElementsByName('num');
+				for (var i = 0; i < chk.length; i++){
+					if(chk[i].checked){
+						nums++;
+					}
+				}
+				document.getElementById('nums').value = nums;
+				if (nums>0){
+					document.all.confirm.disabled = '';
+					
+				}else{
+					document.all.confirm.disabled = "disabled";
+					}
+			}
+			
+			
+		</script>
+
+	</head>
+	<body>
+		<div id="title">
+			<div id="logobox">
+				<a  href="index.html">
+					<img src="img/logo.jpg" class="logo">
+					<div class="logo-word">
+						<p>购物网站</p>
+						<p>点击回首页</p>
+					</div>
+				</a>
+			</div>
+			<div class="search bar">
+				<form>
+					<input type="text" placeholder="请输入您要搜索的内容...">
+					<button type="submit">
+						<!--<img id="searchbutton" src="img/search.jpg" />-->
+						🔍
+					</button>
+				</form>
+			</div>
+			<div class="cart">
+				<a href="cart.html" style="color: white;"><img src="img/购物车.png" />购物车</a>
+			</div>
+		</div>
+		<div id="main">
+			<div class="cartbox">
+				<div class="carttitle">店铺名</div>
+				<div class="box">
+					<input type="checkbox" name="num" onClick="count(this)"  class="checkbox" />
+					<a>
+						<div class="img-box">
+							<img src="img/item3.png" style="width: 135px;height: 135px;"/>
+						</div>
+						<div class="item-name">商品名描述字商品名描述字商品名描述字</div>
+					</a>
+					<div class="item-info">
+						<div class="item-info-word">具体规格：规格规格规格规格</div>
+						<div class="item-info-word">颜色分类：颜色颜色颜色颜色</div>
+					</div>
+					<div class="item-num">
+						<div id="left">-</div>
+						<div id="center">1</div>
+						<div id="right">+</div>
+					</div>
+					<div class="item-price">$单价</div>
+				</div>
+			</div>
+			
+			
+			<div class="botton">
+				<form id="numcount" name="form" method="post" action="">
+					已选商品 <input name="textfield" id="nums" type="text" size="2" value="0">&nbsp;&nbsp;&nbsp;件
+				</form>
+				<button id="confirm" disabled="disabled">结算</button>
+			</div>
+			
+		</div>
+		
+		
+		<div id="footer">
+			<hr id="hr2"/>
+    		<p>本网页为Web课设所用，没有版权<br />联系方式：123456789@123.com</p>
+ 		</div>
+	</body>
+</html>

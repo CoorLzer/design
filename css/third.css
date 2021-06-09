@@ -1,0 +1,292 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+#container {
+            width: 500px;
+            height: 820px;
+            margin: 0 auto;
+        }
+        
+        div.search {padding: 30px 0;}
+ 
+        form {
+            position: relative;
+            width: 300px;
+            margin: 0 auto;
+        }
+ 
+        input, button {
+            border: none;
+            outline: none;
+        }
+ 
+        input {
+            width: 100%;
+            height: 42px;
+            padding-left: 13px;
+            padding-right:46px;
+        }
+ 
+       	button {
+            height: 42px;
+            width: 42px;
+            cursor: pointer;
+            position: absolute;
+        }
+
+
+#title{
+	background-color:#102833;
+	width: 100%;
+	height:100px;
+}
+	#logobox{
+		float: left;
+		background-color: darkslategrey;
+		margin-left: 100px;
+		height: 100%;
+		width: 300px;
+		/*display:table;*/
+	}
+	
+	.bar {
+		float: left;
+		margin-left: 15%;
+	}
+		.bar form {
+			height: 42px;
+		}
+		.bar input {
+			width: 250px;
+			border-radius: 42px;
+			border: 2px solid #324B4E;
+			background: #F9F0DA;
+			transition: .3s linear;
+			float: right;
+		}
+
+		.bar button {
+			background: none;
+			top: 0px;
+			right: 0;
+		}
+
+		.logo{
+			width: 80px;
+			height: 80%;
+			float: left;
+			margin: 10px 10px;
+	
+		}
+
+		.logo-word{
+			height: 100%;
+			width: 150px;
+			float: left;
+			margin-left: 10px;
+			text-decoration: none;
+			/*text-align: center;*/
+			font-size: 17px;
+			margin-bottom: 10px;
+			font-weight: 100;
+			color: white;
+		}
+		
+		.cart{
+			position: absolute;
+			float: left;
+			width: 150px;
+			height: 35px;
+			text-align: center;
+			margin-top: 30px;
+			margin-left: 70%;
+			font-size: 25px;
+			border:2px solid;
+			border-radius:25px;/*圆角*/
+			box-shadow: 2px 2px 3px gray;
+			color: white;
+			background-color: darkslategrey;
+			
+		}
+			
+		.cart img{
+			width: 25px;
+			margin-top: 8px;
+			margin-right: 15px;
+		}
+		
+#main{
+	margin-left: 12.5%;
+}
+	.cartbox{
+		margin-top: 20px;
+		height: 200px;
+		width: 85%;
+		background-color: whitesmoke;
+	}
+		.carttitle{
+			margin-top: 10px;
+			margin-left: 15px;
+			color: gray;
+		}
+		.box{
+			height: 170px;
+			margin: 5px 10px;
+			border: 1px solid gainsboro;
+		}
+			.checkbox{
+				position: absolute;
+				float: left;
+				height: 15px;
+				width: 15px;
+				margin-left: 5px;
+				margin-top: 5px;
+			}
+			.img-box{
+				position: absolute;
+				float: left;
+				width: 135px;
+				height: 135px;
+				margin-left: 30px;
+				margin-top: 25px;
+				background-color: white;
+			}
+			.item-name{
+				position: absolute;
+				float: left;
+				height: 135px;
+				width: 135px;
+				margin-top: 30px;
+				margin-left: 200px;
+			}
+			.item-info{
+				position: absolute;
+				float: left;
+				width: 125px;
+				height: 135px;
+				margin-left: 450px;
+				margin-top: 25px;
+			}
+				.item-info-word{
+					color: darkgray;
+				}
+			.item-num{
+				position: absolute;
+				float: left;
+				margin-left: 650px;
+				margin-top: 25px;
+			}
+				#left{
+					position: absolute;
+					float: left;
+					width: 20px;
+					height: 20px;
+					margin-left: 40px;
+					margin-top: 50px;
+					text-align: center;
+					background-color: bisque;
+				}
+				#center{
+					position: absolute;
+					float: left;
+					width: 20px;
+					height: 20px;
+					margin-left: 60px;
+					margin-top: 50px;
+					text-align: center;
+					background-color: white;
+				}
+				#right{
+					position: absolute;
+					float: left;
+					width: 20px;
+					height: 20px;
+					margin-left: 80px;
+					margin-top: 50px;
+					text-align: center;
+					background-color: bisque;
+				}
+			.item-price{
+				position: absolute;
+				float: left;
+				margin-top: 70px;
+				margin-left: 950px;
+				font-size: 20px;
+				color: red;
+			}
+			
+			
+			
+			
+button{
+	background-color: #FF4400;
+}
+button:disabled{
+	background-color: gainsboro;
+}			
+			
+	
+	
+			.botton{
+				position: fixed;
+				bottom: 0;
+				margin-bottom: 0px;
+				height: 60px;
+				width: 74.5%;
+				background-color: gainsboro;
+			}
+				#numcount{
+					position: absolute;
+					float: left;
+					text-align: center;
+					margin-top: 25px;
+					margin-left: 750px;
+					font-size: 20px;
+				}
+				#nums{
+					position: absolute;
+					float: left;
+					text-align: center;
+					padding: 0px;
+					height: 26px;
+					width: 15px;
+					margin-left: 0px;
+					font-size: 25px;
+					color: red;
+					background-color: gainsboro;
+				}
+			#confirm{
+				position: absolute;
+				float: left;
+				height: 60px;
+				width: 83.14px;
+				margin-left: 1050px;
+				/*color: white;
+				background-color: #FF4400;
+					*/
+			}
+
+#footer{
+  clear:both;
+  text-align:center;
+}
+
+	#hr2{
+ 	margin-top:30px;
+  	width:70%;
+  	clear:both;
+	}
+
+#footer p{
+  padding:10px 1px;
+}
+
+a{
+	display: block;
+	text-decoration: none;
+}
+a:hover{
+color: pink;
+}
